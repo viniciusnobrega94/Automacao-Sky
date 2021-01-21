@@ -18,7 +18,7 @@ describe  "Teste SKY" do
     descricaoModal = 'c'
     duracaoModal = 'd'
 
-    within('.schedule-live', match: :first) do
+    within('.program-schedule-item', match: :first) do
         descricao = find('.program-schedule-title').text
         duracao = find('.program-duration').text
         puts descricao
@@ -26,7 +26,7 @@ describe  "Teste SKY" do
         
     end
     
-    find('.schedule-live', match: :first).click
+    find('.program-schedule-item', match: :first).click
 
     within('.sky-modal-program') do
         descricaoModal = find('.sky-modal-program-title').text
